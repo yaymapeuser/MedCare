@@ -1,0 +1,62 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                        
+    <div class="mb-3 form-group">
+        <input 
+            type="email" 
+            class="form-control text-center" 
+            placeholder="email" 
+            name="femail" 
+            required 
+            formControlName="femail"
+            autocomplete="off"
+            >
+    </div>
+    <div class="errors-container" 
+    *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)"
+    >
+        <p class="error-msg" *ngIf="emailControl.hasError('required')">El campo es obligatorio</p>
+        <p class="error-msg" *ngIf="emailControl.hasError('email')">El campo debe ser un email valido</p>
+    </div>
+
+    <div class="mb-5 form-group">
+        <input 
+            type="password" 
+            class="form-control text-center" 
+            placeholder="contrasena" 
+            name="fcontrasena" 
+            required 
+            formControlName="fcontrasena"
+            >
+    </div>
+    <div class="errors-container" 
+    *ngIf="contrasenaControl.invalid && (contrasenaControl.touched || contrasenaControl.dirty)">
+        <p class="error-msg" *ngIf="contrasenaControl.hasError('required')">El campo es obligatorio</p>
+    </div>
+    
+    <div class="form-check mb-4">
+        <div class="row">
+            <div class="col-6">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Recordar
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <pre>{{ loginForm.value | json}}</pre>
+
+    <button 
+        type="submit" 
+        class="btn btn-primary main_button_green_ w-100"
+        [disabled]="loginForm.invalid">
+        Iniciar Sesion
+    </button>
+
+    <p class="text text-center mb-0">
+        Olviddo la <a href="#" class="text-link text">Contrasena</a>?
+    </p>
+    <p class="text text-center">
+        No tiene una cuenta? <a [routerLink]="['/registro']" class="text-link text">hacer una nueva</a>?
+    </p>
+</form>

@@ -1,0 +1,166 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 bloque1 d-flex justify-content-center align-items-center text-center">
+            <div class="row shadow p-4 mb-5 mt-5 w-75">
+                <div class="col-12 mb-5 mt-5">
+                    <img src="/assets/img/Logo.jpg" class="mb-5" alt="">
+
+                        <form class="row g-3 needs-validation" (ngSubmit)="onSubmit()" [formGroup]="registrarForm">  
+                            <div class="col-6">
+                                <div #fnombre class="mb-3">
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="fnombre" 
+                                        placeholder="Nombre" 
+                                        required
+                                        formControlName="fname"
+                                        >
+                                </div>
+                                <div class="mb-3">    
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="fapellido"
+                                        required 
+                                        placeholder="Apellido"                                        
+                                        formControlName="fapellido"
+                                        >
+                                </div>
+                                <div class="mb-3">
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="fedad"
+                                        required
+                                        placeholder="Edad"                                        
+                                        formControlName="fedad"
+                                        >
+                                        <div 
+                                            *ngIf="registrarForm.get('fedad')?.touched && registrarForm.get('fedad')?.errors?.['minlength']"    
+                                            class="alert alert-danger">
+                                            <p>Este campo debe al menos {{registrarForm.get('fedad')?.errors?.['minlength'].requiredLength}} caracteres</p>
+                                        </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input 
+                                        type="tel" 
+                                        class="form-control" 
+                                        name="ftelefono"
+                                        required 
+                                        placeholder="Telefono"                                        
+                                        formControlName="ftelefono"
+                                        >
+                                        <div 
+                                            *ngIf="registrarForm.get('ftelefono')?.touched && registrarForm.get('ftelefono')?.errors?.['minlength']"    
+                                            class="alert alert-danger">
+                                            <p>Este campo debe al menos {{registrarForm.get('ftelefono')?.errors?.['minlength'].requiredLength}} caracteres</p>
+                                        </div>
+                                </div>   
+                                <div class="mb-3">  
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        name="focupacion"
+                                        required 
+                                        placeholder="Ocupacion"                                        
+                                        formControlName="focupacion"
+                                        >
+                                </div> 
+                                <div class="mb-3">  
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        name="femail"  
+                                        required 
+                                        placeholder="Email"                                        
+                                        formControlName="femail"
+                                        >
+                                        <div *ngIf="registrarForm.get('femail')?.touched && registrarForm.get('femail')?.errors?.['email']"    
+                                            class="alert alert-danger">Por favor, incluya un '@' en la direccion de correo.
+                                        </div>
+                                </div>
+                                <div class="mb-4">
+                                    <input 
+                                        type="password" 
+                                        class="form-control" 
+                                        name="fcontrasena1"
+                                        placeholder="Contrasena"  
+                                        required                                       
+                                        formControlName="fcontrasena1"
+                                        >
+                                        <div *ngIf="registrarForm.get('fcontrasena1')?.touched && registrarForm.get('fcontrasena1')?.errors?.['minlength']"    
+                                            class="alert alert-danger">No puede tener mas de {{registrarForm.get('fcontrasena1')?.errors?.['minlength'].requiredLength}} caracteres
+                                        </div>
+                                </div>  
+                                <div class="mb-3">  
+                                    <input 
+                                        type="password" 
+                                        class="form-control" 
+                                        name="fcontrasena2"
+                                        required 
+                                        placeholder="Confirmar Contrasena"                                        
+                                        formControlName="fcontrasena2"
+                                        >
+                                        <div *ngIf="registrarForm.get('fcontrasena2')?.touched && registrarForm.get('fcontrasena2')?.errors?.['minlength']"    
+                                            class="alert alert-danger">No puede tener mas de {{registrarForm.get('fcontrasena2')?.errors?.['minlength'].requiredLength}} caracteres
+                                        </div>
+                                        <div *ngIf="registrarForm.get('fcontrasena1')?.value != registrarForm.get('fcontrasena2')?.value ">
+                                            Password not Match
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="circle mx-auto"></div>
+                                        <button type="file" class="m-2 main_button_green_">Foto</button>
+                                        <button class="main_button_green_">Quitar</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label for="">Subir Certificado</label>
+                                            <input type="file" name="SubCertif_1" id="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Subir Certificado</label>
+                                            <input type="file" name="SubCertif_2" id="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Subir Certificado</label>
+                                            <input type="file" name="SubCertif_3" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-5">
+                                <div class="col-7 mx-auto">
+                                    <div class="form-check mb-3 text-center">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Acepto todos los <a [routerLink]="['/#']">Términos</a>, la <a [routerLink]="['/#']">Política de privacidad</a> y las <a [routerLink]="['/#']">Tarifas</a>
+                                        </label>ecesario aceptar los terminos
+                                    </div>
+                                </div>
+
+                                    <button 
+                                        type="submit" 
+                                        class="btn main_button_green_ w-75" 
+                                        value="Guardar"
+                                        [disabled]="registrarForm.invalid"
+                                    >
+                                        Crea una cuenta
+                                    </button>
+                                    <p>¿Ya tienes una cuenta? <a [routerLink]="['/login']">Iniciar sesión</a></p>
+                            </div>
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.container_footer {
+    margin: 0px 80px;
+}
+
+.footer_text_color{
+    color: #F49777;
+}
+
+.block {
+    margin-top: 6px;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.text-color-white{
+    color: white;
+    text-decoration: none;
+    color: white;
+}
+
+.margen_footer{
+    margin-right: 19px;
+    color: white;
+}
+
+.ancho{
+    width: 130px;
+}
+
+.fa-brands, .fa-solid{
+    font-size: 20px;
+    color: white;
+}
+
+.text_color{
+    color: #4D4D4D;
+}
+
+.text_weight{
+    font-weight: bold;
+}
+
+hr{
+    background: #4D4D4D;
+}

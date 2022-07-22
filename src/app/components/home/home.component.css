@@ -1,0 +1,185 @@
+.background-img {
+  height: 790px;
+  margin-top: 70px;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 992px) {
+  .background-img {
+    height: 1090px;
+    margin-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.background{
+    background: url("../../../assets/img/Fondo_Fisioterapeutas_1.jpg");
+    background-color: white;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 0px;
+    padding-bottom: 250px;
+}
+
+.text-h-banner {
+  font-size: 25px;
+}
+
+.color{
+    color: #00AC7A;
+}
+
+.text_main{
+    height: 580px;
+}
+
+.nav-item{
+    margin-right: 5px;
+}
+
+.main_box{
+    height: 250px;
+}
+
+.servicio_img{
+    background-image: url("../../../assets/img/ft_dp_i.jpg");
+    background-color: #cccccc;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 350px 250px;
+}
+
+.home_formulario{
+    background-image: url("../../../assets/img/Oferta-laboral-Fisioterapeuta.jpeg");
+    background-color: #cccccc;
+    height: 304px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.home_formulario_text{
+    color: #00AC7A;
+}
+
+.main_box{
+    margin: 0px;
+}
+
+.main_button{
+    text-decoration: none;
+    background: white;
+    padding: 8px 15px;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.main_button:hover{
+    animation-name: mainbutton;
+    animation-duration: 1s;
+}
+
+@keyframes mainbutton {
+    from {
+        transform: rotateX(180deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+.margen_especialistas{
+  margin-right: 30px;
+  width: 18rem;
+}
+
+/*.zoom {
+    animation-name: zoom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}*/
+
+.zoom:hover {
+    transition: transform .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+@keyframes zoom {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+      }  
+      50% {
+        transform: translateY(10px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;	
+      }
+  }
+
+  .card-css:hover{
+    transition: transform .2s ease-in-out;
+    transform: scale(1.05);
+  }
+
+  .zoom_text{
+    animation: img_grid_punto 3s;
+  }
+
+  .img_grid{
+    width: 350px;
+    height: 250px;
+  }
+
+  .img_grid:hover {
+    opacity: 0.5;
+    transition-timing-function: ease-out;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .img_grid_punto{
+    color: #00AC7A;
+    position: relative;
+    top: -130px;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.4;
+    animation: img_grid_punto 0.3s;
+  }
+
+  @keyframes img_grid_punto {
+    0% {
+        transform: translateY(20px);
+      }
+  }
+
+  .col-left{
+    padding: 20px 60px 20px 50px;
+  }
+
+  .col-recht{
+    background: #f2f2f2;
+    padding: 20px 40px 20px 60px;
+  }
+
+  .margin_block{
+    margin: 100px 0px;
+  }
+
+  .martop{
+    margin-top: 180px;
+  }
+
+  .consult_grid {
+    opacity: 1.0;
+    margin: auto;
+    transition: transform .2s ease-in-out;
+    transform: scale(1.30);
+    cursor: pointer;
+  }

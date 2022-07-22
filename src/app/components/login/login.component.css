@@ -1,0 +1,17 @@
+.booking {
+    margin-top: 0px;
+}
+
+.bloque1{
+    margin-top: 60px;
+}
+
+.background {
+    background-image: url("../../../assets/img/background_login_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130% 100%;
+    padding: 10px;
+    height: 90vh;
+}
+

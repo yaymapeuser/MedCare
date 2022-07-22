@@ -1,0 +1,55 @@
+.background {
+    background-image: url("../../../assets/img/background__.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 75% 100%;
+    padding: 10px;
+    height: 1350px;
+    margin-bottom: 120px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.block{
+    margin-top: 200px;
+}
+
+.row {padding: 8px;}
+
+.col_left{padding: 20px;}
+
+.col_right {
+    background: #F9F9FA;
+    padding: 20px;
+}
+
+ul {padding: 0px;}
+
+.main_button_green{
+    text-decoration: none;
+    background: #00AC7A;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #00AC7A;
+}
+
+.main_button_green:hover{
+    background: #198754;
+    border: 2px solid #198754;
+}
+
+i{color: #00AC7A;}
+
+.datenschutzerklaerung{font-size: 11px;}
+
+@media (min-width: 576px) and (max-width: 992px) { 
+    .background {
+        height: 1620px;
+    }
+
+
+ }

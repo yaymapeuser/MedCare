@@ -1,0 +1,36 @@
+.container {
+    padding: 0px;
+}
+
+.background {
+    background-image: url("../../../assets/img/AdobeStock_183240584.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0px;
+    height: 355px;
+}
+
+.img_ {
+    background-image: url("../../../assets/img/background__.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120% 100%;
+    padding: 0px;
+    height: 500px;
+    width: 470px;
+}
+
+.img__ {
+    background-image: url("../../../assets/img/Personal_4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    padding: 0px;
+    height: 500px;
+    width: 470px;
+}
+
+.text_left {
+    padding: 0px 0px 0px 30px;
+}

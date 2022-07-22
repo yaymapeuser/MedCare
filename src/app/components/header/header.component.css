@@ -1,0 +1,66 @@
+.button_text{
+    color: #198754;
+    border: 2px solid #198754;
+    background: white;
+    padding: 10px 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.button_text:hover {
+    background: #198754;
+    color: white;
+    border: 1px solid white;
+}
+
+.img_social_media{
+    width: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.img-thumbnail{
+    width: 80px;
+    height: 80px;
+}
+
+.navbar .has-megamenu{
+    position: static!important;
+}
+
+.navbar .megamenu{
+    left:0; 
+    right:0; 
+    width:100%; 
+    margin-top:0;  
+}
+
+.list-unstyled li a{
+    color: white;
+}
+
+.fa-brands{
+    font-size: 20px;
+    color: white;
+}
+
+.nav-item a:hover{
+    color: gainsboro;
+    transition: transform .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.nav-item a:focus{
+    color: gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.fa-brands:hover{
+    transition: transform .2s ease-in-out;
+    transform: scale(1.1);
+}

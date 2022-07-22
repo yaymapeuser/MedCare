@@ -1,0 +1,51 @@
+.container{
+    padding: 0px;
+}
+
+.background{
+    background-image: url("../../../assets/img/AdobeStock_183240584.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0px;
+    height: 355px;
+}
+
+.banner_Texto{
+    font-size: 30px;
+    color: black;
+    top: 50px;
+}
+
+.list_li_left{
+    padding: 30px;
+    box-shadow: 0px -1px 37px -22px rgba(152,152,152,0.75);
+    -webkit-box-shadow: 0px -1px 37px -22px rgba(152,152,152,0.75);
+    -moz-box-shadow: 0px -1px 37px -22px rgba(152,152,152,0.75);
+}
+
+.list_li_left ul{
+    padding: 0px;
+}
+
+.list_li_left ul li{
+	padding: 10px 0px 10px 20px;
+	list-style: none;
+	background-image: url("../../../assets/img/haken.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 13px;
+}
+
+.list_li_right{
+    padding: 25px 0px 30px 70px;
+}
+
+.list_ul_ventajas li{
+    padding: 20px 70px 10px 20px;
+	list-style: none;
+	background-image: url("../../../assets/img/haken.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 13px;
+}

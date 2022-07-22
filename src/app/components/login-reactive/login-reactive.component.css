@@ -1,0 +1,57 @@
+.form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: px solid #00AC7A;
+    box-shadow: none;
+}
+
+/*.form-control:focus{
+    color: #00AC7A;
+    border: 2px solid #00AC7A;
+}*/
+
+.main_button_green_ {
+    text-decoration: none;
+    background: #00AC7A;
+    padding: 8px 15px;
+    color: gray;
+    border-radius: 10px;
+    border: 2px solid #00AC7A;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.main_button_green_:hover
+{
+    background: #198754;
+    color: white;
+    border: 2px solid #198754;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.service-btn {
+    background: white;
+    border: 1px solid rgb(220,220,220);
+    width: 100%;
+    color: rgb(46, 46, 46);
+    height: 45px;
+    box-shadow: none!important;
+}
+
+.service-btn:hover {
+    color: #00AC7A;
+    border: 1px solid #00AC7A;
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+    outline: 2px solid #bd0c0c;
+}
+
+.ng-dirty.ng-pending:is(input,textarea){
+    outline: 2px solid #838a2a;
+}
