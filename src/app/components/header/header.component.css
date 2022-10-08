@@ -18,6 +18,10 @@
     width: 20px;
 }
 
+.ventana{
+    z-index: 7;
+}
+
 a {
     text-decoration: none;
     color: white;

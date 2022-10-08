@@ -4,7 +4,7 @@
       <nav class="navbar navbar-expand-lg">
 
         <a class="navbar-brand" routerLink="/home">
-          <img src="assets/img/Logo.jpg" width="70" height="30" alt="">
+          <img src="/assets/img/Logo.jpg" class="w-25" alt="">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -185,51 +185,40 @@
               <a class="nav-link" href="https://www.xing.com/" target="_blank"><i class="fa-brands fa-xing"></i></a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#whatsappModal"><i class="fa-brands fa-whatsapp"></i></a>
-              
-              <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      Mit dem Klicken auf den Button „Zu WhatsApp", erklären Sie sich einverstanden, dass Ihre Daten (insbesondere Telefonnummer und Name) an Facebook und WhatsApp weitergegeben und im Rahmen derer AGB´s verarbeitet werden.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary">
-                        <a href="https://wa.me/+4915771493181?text=Me%20interesa%20hacer%20una%20pregunta" target="_blank">
-                        A WhatsApp</a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a class="nav-link" href="https://wa.me/+4915771493181?text=Me%20interesa%20hacer%20una%20pregunta" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
             </li>
-            
             <li class="nav-item">
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-              </button>
+              <div class="ventana">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Launch demo modal
+                </button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
+
+
+
           </ul>
           <button [routerLink]="['/login']" class="button_text" type="button">Login</button>
         </div>

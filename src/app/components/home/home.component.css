@@ -131,6 +131,11 @@
     animation: img_grid_punto 3s;
   }
 
+  .img_grid_{
+    width: 280px;
+    height: 400px;
+  }
+
   .img_grid{
     width: 350px;
     height: 250px;

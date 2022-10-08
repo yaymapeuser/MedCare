@@ -85,8 +85,8 @@
                                         type="password" 
                                         class="form-control" 
                                         name="fcontrasena1"
-                                        placeholder="Contrasena"  
-                                        required                                       
+                                        required 
+                                        placeholder="Confirmar Contrasena"                                        
                                         formControlName="fcontrasena1"
                                         >
                                         <div *ngIf="registrarForm.get('fcontrasena1')?.touched && registrarForm.get('fcontrasena1')?.errors?.['minlength']"    
@@ -112,26 +112,36 @@
                             </div>
 
                             <div class="col-6">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="circle mx-auto"></div>
-                                        <button type="file" class="m-2 main_button_green_">Foto</button>
-                                        <button class="main_button_green_">Quitar</button>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="circle mx-auto overflow-hidden">
+                                                <img [src]="previsualizacion" alt="Registro Imagen" class="w-100">                                                    
+                                                <!--accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*"-->
+                                            </div>
+                                            <button class="m-2 main_button_green_" type="button" (click)="onUpload()" >Subir Foto</button>
+
+                                            <button class="main_button_green_" (click)="quitarArchivo()">Quitar</button>
+
+                                            <input *ngIf="previsualizacion" (change)="capturarFile($event)" type="file" accept="image/*" class="form-control mb-5">
+
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="">Subir Certificado</label>
-                                            <input type="file" name="SubCertif_1" id="">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="">Subir Certificado</label>
-                                            <input type="file" name="SubCertif_2" id="">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="">Subir Certificado</label>
-                                            <input type="file" name="SubCertif_3" id="">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="">Subir Certificado</label>
+                                                <input type="file" accept=".pdf,.doc,.docx" class="form-control">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="">Subir Certificado</label>
+                                                <input type="file" accept=".pdf,.doc,.docx" class="form-control">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="">Subir Certificado</label>
+                                                <input type="file" accept=".pdf,.doc,.docx" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

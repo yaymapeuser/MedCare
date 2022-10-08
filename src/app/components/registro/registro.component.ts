@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-registro',
@@ -17,16 +18,17 @@ export class RegistroComponent implements OnInit {
   mobnumPattern = "^((\\+91-?)|0)?[0-9]{10}$"; 
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
-  constructor(private readonly fb: FormBuilder) {
+  public previsualizacion: string = "";
+  public archivos:any = [];
+  public previsualizacion1: string = "";
 
-  }
+  selectedFile = null;
+
+
+  constructor(private readonly fb: FormBuilder, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.registrarForm = this.initForm();
-  }
-
-  onSubmit(){
-    console.log('Form ->');
   }
 
   initForm(): FormGroup{
@@ -59,13 +61,11 @@ export class RegistroComponent implements OnInit {
                   ])],
       fcontrasena1: [ '', Validators.compose([
                       Validators.required,
-                      Validators.minLength(1),
                       Validators.pattern(this.pwdPattern)
                     ])
                     ], 
       fcontrasena2: [ '', Validators.compose([
                       Validators.required,
-                      Validators.minLength(1),
                       Validators.pattern(this.pwdPattern)
                     ])
                     ],
@@ -74,4 +74,85 @@ export class RegistroComponent implements OnInit {
     );
   }
 
+  onSubmit(){
+  }
+
+  subirArchivo():any{}
+
+  quitarArchivo():any{ this.previsualizacion = "";}
+
+  onUpload(){
+    this.previsualizacion = this.previsualizacion1;
+  }
+
+  capturarFile(event: any):any{
+    const archivoCapturado:File = event.target.files[0];
+
+
+    this.extraerBase64(archivoCapturado).then((imagen:any) => {
+      this.previsualizacion = imagen.base;
+      this.previsualizacion1 = this.previsualizacion;
+    });
+    this.archivos.push(archivoCapturado);
+    this.onUpload();
+  }
+
+  extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
+    try {
+      const unsafeImg = window.URL.createObjectURL($event);
+      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
+      const reader= new FileReader();
+      reader.readAsDataURL($event);
+      reader.onload = () => {
+        resolve({
+          blob: $event,
+          image,
+          base: reader.result
+        });
+      };
+      reader.onerror = error => {
+        resolve({
+          blob: $event,
+          image,
+          base: null
+        });
+      };
+    
+    } catch (e) {
+      return null;
+    }
+  });
 }
+
+
+
+
+
+
+
+
+  /*extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
+    try {
+      const unsafeImg = window.URL.createObjectURL($event);
+      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
+      const reader= new FileReader();
+      reader.readAsDataURL($event);
+      reader.onload = () => {
+        resolve({
+          blob: $event,
+          image,
+          base: reader.result
+        });
+      };
+      reader.onerror = error => {
+        resolve({
+          blob: $event,
+          image,
+          base: null
+        });
+      };
+    
+    } catch (e) {
+      return null;
+    }
+  });*/
